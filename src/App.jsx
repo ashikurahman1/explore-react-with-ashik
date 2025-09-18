@@ -1,8 +1,9 @@
+import { Outlet } from 'react-router';
 import './App.css';
-import ToDoApp from './components/BeginnerProjects/ToDoApp/ToDoApp';
-import BeginnerSection from './components/BeginnerSection';
+
 import Hero from './components/Hero';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <div>
         <Navbar />
         <Hero />
-        <BeginnerSection />
+        <Outlet></Outlet>
+        <Footer />
       </div>
     </>
   );

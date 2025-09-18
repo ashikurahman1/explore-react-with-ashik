@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './Button';
-
+import { Link } from 'react-router';
 const Navbar = () => {
   return (
     <div className="bg-black py-2">
@@ -32,15 +32,9 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow space-y-4"
             >
-              <li className="hover:border-blue-500 hover:border-b-2 cursor-pointer py-1 px-2 transition">
-                <a>Beginner Projects</a>
-              </li>
-              <li className="hover:border-blue-500 hover:border-b-2 cursor-pointer py-1 px-2 transition">
-                <a>Intermediate Projects</a>
-              </li>
-              <li className="hover:border-blue-500 hover:border-b-2 cursor-pointer py-1 px-2 transition">
-                <a>Advanced Projects</a>
-              </li>
+              <Link to={'/beginner'}>Beginner Projects</Link>
+              <Link to={'/intermediate'}>Intermediate Projects</Link>
+              <Link to={'/advance'}>Advanced Projects</Link>
             </ul>
           </div>
           <a className="font-bold animate-pulse text-xl ml-3">
@@ -49,15 +43,24 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="space-x-6 menu-horizontal px-1">
-            <li className="hover:border-blue-500 hover:border-b-2 cursor-pointer py-1 px-2 transition">
-              <a>Beginner Projects</a>
-            </li>
-            <li className="hover:border-blue-500 hover:border-b-2 cursor-pointer py-1 px-2 transition">
-              <a>Intermediate Projects</a>
-            </li>
-            <li className="hover:border-blue-500 hover:border-b-2 cursor-pointer py-1 px-2 transition">
-              <a>Advanced Projects</a>
-            </li>
+            <Link
+              to={'/beginner'}
+              className="hover:border-blue-500 hover:border-b-2 cursor-pointer py-1 px-2 transition"
+            >
+              Beginner Projects
+            </Link>
+            <Link
+              to={'/intermediate'}
+              className="hover:border-blue-500 hover:border-b-2 cursor-pointer py-1 px-2 transition"
+            >
+              Intermediate Projects
+            </Link>
+            <Link
+              to={'/advance'}
+              className="hover:border-blue-500 hover:border-b-2 cursor-pointer py-1 px-2 transition"
+            >
+              Advanced Projects
+            </Link>
           </ul>
         </div>
         <div className="navbar-end">
