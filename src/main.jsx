@@ -4,6 +4,7 @@ import App from './App.jsx';
 
 import { createBrowserRouter } from 'react-router';
 import { RouterProvider } from 'react-router/dom';
+import Home from './components/Home/Home.jsx';
 import BeginnerSection from './components/BeginnerSection.jsx';
 import IntermediateSection from './components/IntermediateSection.jsx';
 import AdvanceSection from './components/AdvanceSection.jsx';
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
     path: '/',
     element: <App />,
     children: [
+      {
+        index: true,
+        element: <Home />,
+      },
       {
         path: '/beginner',
         element: <BeginnerSection />,

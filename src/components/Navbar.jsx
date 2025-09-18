@@ -32,6 +32,12 @@ const Navbar = () => {
               tabIndex={0}
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow space-y-4"
             >
+              <Link
+                to={'/'}
+                className="hover:border-blue-500 hover:border-b-2 cursor-pointer py-1 px-2 transition"
+              >
+                Home
+              </Link>
               <Link to={'/beginner'}>Beginner Projects</Link>
               <Link to={'/intermediate'}>Intermediate Projects</Link>
               <Link to={'/advance'}>Advanced Projects</Link>
@@ -43,6 +49,12 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="space-x-6 menu-horizontal px-1">
+            <Link
+              to={'/'}
+              className="hover:border-blue-500 hover:border-b-2 cursor-pointer py-1 px-2 transition"
+            >
+              Home
+            </Link>
             <Link
               to={'/beginner'}
               className="hover:border-blue-500 hover:border-b-2 cursor-pointer py-1 px-2 transition"
